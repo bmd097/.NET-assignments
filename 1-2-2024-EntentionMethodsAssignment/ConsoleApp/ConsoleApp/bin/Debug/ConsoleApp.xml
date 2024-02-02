@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleApp</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleApp.CoffeeType">
+            <summary>
+            This enum defines all the different types of Coffee
+            </summary>
+        </member>
+        <member name="T:ConsoleApp.Coffee">
+            <summary>
+            Its a simple coffee class!
+            </summary>
+        </member>
+        <member name="P:ConsoleApp.Coffee.Id">
+            <summary>
+            Gets or sets the Id of the coffee.
+            </summary>
+        </member>
+        <member name="P:ConsoleApp.Coffee.Name">
+            <summary>
+            Gets or sets the name of the coffee.
+            </summary>
+        </member>
+        <member name="P:ConsoleApp.Coffee.Description">
+            <summary>
+            Gets or sets the description of the coffee.
+            </summary>
+        </member>
+        <member name="P:ConsoleApp.Coffee.Type">
+            <summary>
+            Gets or sets the type of the coffee.
+            </summary>
+        </member>
+        <member name="M:ConsoleApp.Coffee.#ctor(System.Int32,System.String,System.String,ConsoleApp.CoffeeType)">
+            <summary>
+            Constructor to initialize coffee properties.
+            </summary>
+            <param name="Id">The Id of the coffee.</param>
+            <param name="Name">The name of the coffee.</param>
+            <param name="Description">The description of the coffee.</param>
+            <param name="Type">The type of the coffee.</param>
+        </member>
+        <member name="M:ConsoleApp.CoffeeShop.GetAllCoffees">
+            <summary>
+            Gets all the coffees in the coffee shop.
+            </summary>
+            <returns>A list of all the coffees.</returns>
+        </member>
+        <member name="M:ConsoleApp.CoffeeShop.GetCoffee(System.Int32)">
+            <summary>
+            Gets a specific coffee by its Id.
+            </summary>
+            <param name="Id">The Id of the coffee.</param>
+            <returns>The coffee with the specified Id.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the Id is less than 0.</exception>
+            <exception cref="T:System.Exception">Thrown when the Id is greater than the number of coffees.</exception>
+        </member>
+        <member name="M:ConsoleApp.CoffeeShop.GetCoffeeFromType(ConsoleApp.CoffeeType)">
+            <summary>
+            Gets all the coffees of a specific type.
+            </summary>
+            <param name="Type">The type of coffee.</param>
+            <returns>A list of coffees of the specified type.</returns>
+        </member>
+        <member name="T:ConsoleApp.Logger">
+            <summary>
+            This class is used for Logging purposes.
+            </summary>
+        </member>
+        <member name="M:ConsoleApp.Logger.LogAfterInsertion(System.String)">
+            <summary>
+            After any Insertion print this log
+            </summary>
+            <param name="message">This is the message to display in log.</param>
+        </member>
+        <member name="T:ConsoleApp.Extensions">
+            <summary>
+            This class adds more functionalities
+            </summary>
+        </member>
+        <member name="M:ConsoleApp.Extensions.ConcatWithSeparator(System.String,System.String,System.String)">
+            <summary>
+            Concatenates two strings with a separator in between
+            </summary>
+            <param name="_">The first string</param>
+            <param name="S1">The second string</param>
+            <param name="Separator">The separator to be used</param>
+            <returns>The concatenated string</returns>
+        </member>
+        <member name="M:ConsoleApp.Extensions.Add2Nums(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds two numbers
+            </summary>
+            <param name="_">The first number</param>
+            <param name="y">The second number</param>
+            <param name="z">The third number</param>
+            <returns>The sum of the three numbers</returns>
+        </member>
+        <member name="M:ConsoleApp.Extensions.Add2Doubles(System.Double,System.Double,System.Double)">
+            <summary>
+            Adds two doubles
+            </summary>
+            <param name="_">The first double</param>
+            <param name="y">The second double</param>
+            <param name="z">The third double</param>
+            <returns>The sum of the three doubles</returns>
+        </member>
+        <member name="M:ConsoleApp.Program.Main(System.String[])">
+            <summary>
+            The runner method
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>
