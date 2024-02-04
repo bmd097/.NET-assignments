@@ -1,0 +1,8 @@
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\bin\Debug\MyCollections.exe.config
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\bin\Debug\MyCollections.exe
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\bin\Debug\MyCollections.pdb
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\obj\Debug\MyCollections.csproj.AssemblyReference.cache
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\obj\Debug\MyCollections.csproj.CoreCompileInputs.cache
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\obj\Debug\MyCollections.exe
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\obj\Debug\MyCollections.pdb
+C:\Users\biswamohan_dwari\Desktop\assignments\2-2-2024-Collections\Collections\MyCollections\bin\Debug\MyCollections.xml

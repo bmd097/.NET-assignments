@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyCollections</name>
+    </assembly>
+    <members>
+        <member name="T:MyCollections.ArrayList">
+            <summary>
+            Represents a dynamic array-based list.
+            </summary>
+        </member>
+        <member name="P:MyCollections.ArrayList.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="M:MyCollections.ArrayList.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the ArrayList class with the specified initial capacity.
+            </summary>
+            <param name="capacity">The initial capacity of the ArrayList.</param>
+        </member>
+        <member name="M:MyCollections.ArrayList.#ctor">
+            <summary>
+            Initializes a new instance of the ArrayList class with the default initial capacity of 10.
+            </summary>
+        </member>
+        <member name="P:MyCollections.ArrayList.Count">
+            <summary>
+            Gets the number of elements contained in the ArrayList.
+            </summary>
+        </member>
+        <member name="M:MyCollections.ArrayList.Add(System.Object)">
+            <summary>
+            Adds an object to the end of the ArrayList.
+            </summary>
+            <param name="value">The object to add to the ArrayList.</param>
+            <returns>The index at which the object has been added.</returns>
+        </member>
+        <member name="M:MyCollections.ArrayList.Contains(System.Object)">
+            <summary>
+            Determines whether the ArrayList contains a specific value.
+            </summary>
+            <param name="value">The value to locate in the ArrayList.</param>
+            <returns>true if the value is found in the ArrayList; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.ArrayList.Clear">
+            <summary>
+            Removes all elements from the ArrayList.
+            </summary>
+        </member>
+        <member name="M:MyCollections.ArrayList.IndexOf(System.Object)">
+            <summary>
+            Searches for the specified object and returns the zero-based index of the first occurrence within the entire ArrayList.
+            </summary>
+            <param name="value">The object to locate in the ArrayList.</param>
+            <returns>The zero-based index of the first occurrence of the value within the entire ArrayList, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:MyCollections.ArrayList.Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts an element into the ArrayList at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the element should be inserted.</param>
+            <param name="value">The element to insert.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when the index is less than 0 or greater than the Count.</exception>
+        </member>
+        <member name="M:MyCollections.ArrayList.Remove(System.Object)">
+            <summary>
+            Removes the first occurrence of a specific object from the ArrayList.
+            </summary>
+            <param name="value">The object to remove from the ArrayList.</param>
+        </member>
+        <member name="M:MyCollections.ArrayList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the ArrayList.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown when the index is less than 0 or greater than or equal to the Count.</exception>
+        </member>
+        <member name="M:MyCollections.ArrayList.GetHashCode">
+            <summary>
+            Returns a hash code for the ArrayList.
+            </summary>
+            <returns>A hash code for the ArrayList.</returns>
+        </member>
+        <member name="M:MyCollections.ArrayList.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the ArrayList.
+            </summary>
+            <param name="obj">The object to compare with the ArrayList.</param>
+            <returns>true if the specified object is equal to the ArrayList; otherwise, false.</returns>
+        </member>
+        <member name="T:MyCollections.Dictionary`2">
+            <summary>
+            Represents a generic dictionary data structure.
+            </summary>
+            <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of the values in the dictionary.</typeparam>
+        </member>
+        <member name="P:MyCollections.Dictionary`2.Count">
+            <summary>
+            Gets the number of key-value pairs contained in the Dictionary.
+            </summary>
+        </member>
+        <member name="M:MyCollections.Dictionary`2.#ctor">
+            <summary>
+            Initializes a new instance of the Dictionary class.
+            </summary>
+        </member>
+        <member name="P:MyCollections.Dictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the value to get or set.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="M:MyCollections.Dictionary`2.Remove(`0)">
+            <summary>
+            Removes the value associated with the specified key from the Dictionary.
+            </summary>
+            <param name="key">The key of the value to remove.</param>
+            <returns>true if the value is successfully removed; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Dictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the value to get.</param>
+            <param name="value">When this method returns, contains the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter.</param>
+            <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Dictionary`2.Add(`0,`1)">
+            <summary>
+            Adds the specified key and value to the Dictionary.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+        </member>
+        <member name="M:MyCollections.Dictionary`2.Contains(`0)">
+            <summary>
+            Determines whether the Dictionary contains the specified key.
+            </summary>
+            <param name="key">The key to locate in the Dictionary.</param>
+            <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+        </member>
+        <member name="T:MyCollections.Node`1">
+            <summary>
+            Its for Internal Purpose
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:MyCollections.DoublyLinkedList`1">
+            <summary>
+            Its for Internal Purpose
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:MyCollections.HashSet`1">
+            <summary>
+            Represents a generic set data structure.
+            </summary>
+            <typeparam name="T">The type of elements in the set.</typeparam>
+        </member>
+        <member name="P:MyCollections.HashSet`1.Count">
+            <summary>
+            Gets the number of elements contained in the HashSet.
+            </summary>
+        </member>
+        <member name="M:MyCollections.HashSet`1.#ctor">
+            <summary>
+            Initializes a new instance of the HashSet class.
+            </summary>
+        </member>
+        <member name="M:MyCollections.HashSet`1.Add(`0)">
+            <summary>
+            Adds an element to the HashSet.
+            </summary>
+            <param name="item">The element to add to the HashSet.</param>
+            <returns>true if the element is added to the HashSet; otherwise, false if the element is already present.</returns>
+        </member>
+        <member name="M:MyCollections.HashSet`1.Remove(`0)">
+            <summary>
+            Removes the specified element from the HashSet.
+            </summary>
+            <param name="item">The element to remove from the HashSet.</param>
+            <returns>true if the element is successfully removed; otherwise, false if the element is not found in the HashSet.</returns>
+        </member>
+        <member name="M:MyCollections.HashSet`1.Contains(`0)">
+            <summary>
+            Determines whether the HashSet contains the specified element.
+            </summary>
+            <param name="item">The element to locate in the HashSet.</param>
+            <returns>true if the HashSet contains the specified element; otherwise, false.</returns>
+        </member>
+        <member name="T:MyCollections.IMyList`1">
+            <summary>
+            Represents a generic list data structure.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="P:MyCollections.IMyList`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="M:MyCollections.IMyList`1.Add(`0)">
+            <summary>
+            Adds an element to the list.
+            </summary>
+            <param name="value">The element to add to the list.</param>
+            <returns>The index at which the element has been added.</returns>
+        </member>
+        <member name="M:MyCollections.IMyList`1.Contains(`0)">
+            <summary>
+            Determines whether the list contains a specific element.
+            </summary>
+            <param name="value">The value to locate in the list.</param>
+            <returns>true if the value is found in the list; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.IMyList`1.Clear">
+            <summary>
+            Removes all elements from the list.
+            </summary>
+        </member>
+        <member name="M:MyCollections.IMyList`1.IndexOf(`0)">
+            <summary>
+            Searches for the specified object and returns the zero-based index of the first occurrence within the entire list.
+            </summary>
+            <param name="value">The object to locate in the list.</param>
+            <returns>The zero-based index of the first occurrence of the value within the entire list, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:MyCollections.IMyList`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an element into the list at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the element should be inserted.</param>
+            <param name="value">The element to insert.</param>
+        </member>
+        <member name="M:MyCollections.IMyList`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specific object from the list.
+            </summary>
+            <param name="value">The object to remove from the list.</param>
+        </member>
+        <member name="M:MyCollections.IMyList`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the list.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+        </member>
+        <member name="T:MyCollections.LinkedList`1">
+            <summary>
+            Represents a linked list data structure.
+            </summary>
+            <typeparam name="T">The type of elements in the linked list.</typeparam>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyCollections.LinkedList`1"/> class.
+            </summary>
+        </member>
+        <member name="P:MyCollections.LinkedList`1.Count">
+            <summary>
+            Gets the number of elements contained in the linked list.
+            </summary>
+        </member>
+        <member name="P:MyCollections.LinkedList`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <returns>The element at the specified index.</returns>
+            <exception cref="T:System.Exception">Thrown when the element at the specified index is not found.</exception>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Add(`0)">
+            <summary>
+            Adds an element to the end of the linked list.
+            </summary>
+            <param name="value">The element to add.</param>
+            <returns>The index at which the element was added.</returns>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Clear">
+            <summary>
+            Removes all elements from the linked list.
+            </summary>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Contains(`0)">
+            <summary>
+            Determines whether the linked list contains a specific element.
+            </summary>
+            <param name="value">The element to locate in the linked list.</param>
+            <returns><c>true</c> if the element is found; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.IndexOf(`0)">
+            <summary>
+            Searches for the specified element and returns the zero-based index of the first occurrence within the entire linked list.
+            </summary>
+            <param name="value">The element to locate in the linked list.</param>
+            <returns>The zero-based index of the first occurrence of the element within the entire linked list, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an element into the linked list at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the element should be inserted.</param>
+            <param name="value">The element to insert.</param>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specific element from the linked list.
+            </summary>
+            <param name="value">The element to remove.</param>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the linked list.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.Exception">Thrown when the element at the specified index is not found.</exception>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.GetHashCode">
+            <summary>
+            Returns a hash code for the linked list.
+            </summary>
+            <returns>A hash code for the linked list.</returns>
+        </member>
+        <member name="M:MyCollections.LinkedList`1.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the linked list.
+            </summary>
+            <param name="obj">The object to compare with the current linked list.</param>
+            <returns><c>true</c> if the specified object is equal to the linked list; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:MyCollections.ObservableCollection`1">
+            <summary>
+            Represents a collection that provides notifications when its elements are added or removed.
+            </summary>
+            <typeparam name="T">The type of elements in the collection.</typeparam>
+        </member>
+        <member name="M:MyCollections.ObservableCollection`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyCollections.ObservableCollection`1"/> class.
+            </summary>
+        </member>
+        <member name="T:MyCollections.ObservableCollection`1.OperationCallback">
+            <summary>
+            Represents the method that will handle the collection changed event.
+            </summary>
+            <param name="type">The type of operation performed on the collection.</param>
+            <param name="affected">The elements affected by the operation.</param>
+        </member>
+        <member name="E:MyCollections.ObservableCollection`1.CollectionChanged">
+            <summary>
+            Occurs when the collection has changed.
+            </summary>
+        </member>
+        <member name="M:MyCollections.ObservableCollection`1.Add(`0)">
+            <summary>
+            Adds an item to the collection.
+            </summary>
+            <param name="item">The item to add.</param>
+        </member>
+        <member name="M:MyCollections.ObservableCollection`1.Remove(`0)">
+            <summary>
+            Removes an item from the collection.
+            </summary>
+            <param name="item">The item to remove.</param>
+            <returns><c>true</c> if the item was successfully removed; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:MyCollections.Queue`1">
+            <summary>
+            Represents a generic queue data structure.
+            </summary>
+            <typeparam name="T">The type of elements in the queue.</typeparam>
+        </member>
+        <member name="M:MyCollections.Queue`1.#ctor">
+            <summary>
+            Initializes a new instance of the Queue class.
+            </summary>
+        </member>
+        <member name="M:MyCollections.Queue`1.Dequeue">
+            <summary>
+            Removes and returns the object at the beginning of the Queue.
+            </summary>
+            <returns>The object that is removed from the beginning of the Queue.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the Queue is empty.</exception>
+        </member>
+        <member name="M:MyCollections.Queue`1.Enqueue(`0)">
+            <summary>
+            Adds an object to the end of the Queue.
+            </summary>
+            <param name="value">The object to add to the Queue.</param>
+        </member>
+        <member name="M:MyCollections.Queue`1.Peek">
+            <summary>
+            Returns the object at the beginning of the Queue without removing it.
+            </summary>
+            <returns>The object at the beginning of the Queue.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the Queue is empty.</exception>
+        </member>
+        <member name="M:MyCollections.Queue`1.Contains(`0)">
+            <summary>
+            Determines whether an element is in the Queue.
+            </summary>
+            <param name="item">The object to locate in the Queue.</param>
+            <returns>true if the object is found in the Queue; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Queue`1.ToArray">
+            <summary>
+            Copies the Queue elements to a new array.
+            </summary>
+            <returns>An array containing copies of the elements of the Queue.</returns>
+        </member>
+        <member name="P:MyCollections.Queue`1.Count">
+            <summary>
+            Gets the number of elements contained in the Queue.
+            </summary>
+        </member>
+        <member name="M:MyCollections.Queue`1.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current Queue.
+            </summary>
+            <param name="obj">The object to compare with the current Queue.</param>
+            <returns>true if the specified object is equal to the current Queue; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Queue`1.GetHashCode">
+            <summary>
+            Returns the hash code for the current Queue.
+            </summary>
+            <returns>A hash code for the current Queue.</returns>
+        </member>
+        <member name="T:MyCollections.Stack`1">
+            <summary>
+            Represents a generic stack data structure.
+            </summary>
+            <typeparam name="T">The type of elements in the stack.</typeparam>
+        </member>
+        <member name="M:MyCollections.Stack`1.#ctor">
+            <summary>
+            Initializes a new instance of the Stack class.
+            </summary>
+        </member>
+        <member name="P:MyCollections.Stack`1.Count">
+            <summary>
+            Gets the number of elements contained in the Stack.
+            </summary>
+        </member>
+        <member name="M:MyCollections.Stack`1.Peek">
+            <summary>
+            Returns the object at the top of the Stack without removing it.
+            </summary>
+            <returns>The object at the top of the Stack.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the Stack is empty.</exception>
+        </member>
+        <member name="M:MyCollections.Stack`1.Pop">
+            <summary>
+            Removes and returns the object at the top of the Stack.
+            </summary>
+            <returns>The object removed from the top of the Stack.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the Stack is empty.</exception>
+        </member>
+        <member name="M:MyCollections.Stack`1.Push(`0)">
+            <summary>
+            Inserts an object at the top of the Stack.
+            </summary>
+            <param name="item">The object to push onto the Stack.</param>
+        </member>
+        <member name="M:MyCollections.Stack`1.Contains(`0)">
+            <summary>
+            Determines whether an element is in the Stack.
+            </summary>
+            <param name="item">The object to locate in the Stack.</param>
+            <returns>true if the object is found in the Stack; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Stack`1.ToArray">
+            <summary>
+            Copies the Stack elements to a new array.
+            </summary>
+            <returns>An array containing copies of the elements of the Stack.</returns>
+        </member>
+        <member name="M:MyCollections.Stack`1.ToString">
+            <summary>
+            Returns a string that represents the current Stack.
+            </summary>
+            <returns>A string that represents the current Stack.</returns>
+        </member>
+        <member name="M:MyCollections.Stack`1.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current Stack.
+            </summary>
+            <param name="obj">The object to compare with the current Stack.</param>
+            <returns>true if the specified object is equal to the current Stack; otherwise, false.</returns>
+        </member>
+        <member name="M:MyCollections.Stack`1.GetHashCode">
+            <summary>
+            Returns the hash code for the current Stack.
+            </summary>
+            <returns>A hash code for the current Stack.</returns>
+        </member>
+    </members>
+</doc>
