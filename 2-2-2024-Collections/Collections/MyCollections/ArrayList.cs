@@ -198,33 +198,58 @@ namespace MyCollections {
             return true;
         }
 
+        /// <summary>
+        /// Enumerator class for iterating over an array of objects.
+        /// </summary>
         public class Enumerator : IEnumerator<object> {
 
             private object[] array;
             int capacity;
             int i;
 
+            /// <summary>
+            /// Initializes a new instance of the <see cref="Enumerator"/> class.
+            /// </summary>
+            /// <param name="array">The array of objects to iterate over.</param>
+            /// <param name="capacity">The maximum number of elements
             public Enumerator(object[] array, int capacity) {
                 this.array = array;
                 this.capacity = capacity;
                 this.i = -1;
             }
 
+            /// <summary>
+            /// Gets the current element in the array.
+            /// </summary>
             public object Current => this.array[i];
 
+            /// <summary>
+            /// Disposes the enumerator.
+            /// </summary>
             public void Dispose() { }
 
+            /// <summary>
+            /// Moves the enumerator to the next element in the array.
+            /// </summary>
+            /// <returns>True if the enumerator successfully moved to the next element; otherwise, false.</returns>
             public bool MoveNext() {
                 i++;
                 if (i >= capacity) return false;
                 return true;
             }
 
+            /// <summary>
+            /// Resets the enumerator to its initial position.
+            /// </summary>
             public void Reset() {
                 i = -1;
             }
         }
 
+        /// <summary>
+        /// Returns an Enumarator
+        /// </summary>
+        /// <returns></returns>
         public IEnumerator<object> GetEnumerator() {
             return new Enumerator(array, initialCapacity);
         }
