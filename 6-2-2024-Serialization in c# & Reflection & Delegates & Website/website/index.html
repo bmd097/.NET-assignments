@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <div>
+            <h2>Hi, I am Mohan</h2>
+            <h3>Junior Software Engineer | EPAM</h3>
+            <h4>biswamohan_dwari@</h4>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <aside>
+            <div id="education" onclick="changeContent('education')">
+                Education
+            </div>
+            <div id="skills" onclick="changeContent('skills')">
+                Skills
+            </div>
+            <div id="hobbies" onclick="changeContent('hobbies')">
+                Hobbies
+            </div>
+        </aside>
+        <main id="main-content">
+            <h2>Click on any one to view!</h2>
+        </main>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Get in touch with me...</h2>
+        <form action="">
+            <div class="input-box">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name here">
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your mail!">
+            </div>
+            <div class="input-box">
+                <label for="description">Description</label>
+                <textarea name="" id="description" cols="6" rows="7"  placeholder="Enter your comments!"></textarea>
+            </div>
+            <button type="submit">Submit </button>
+        </form>
+    </section>
+    <footer>
+        <p>Created by BMD | 2024 | EPAM</p>
+        <p>2/6/24</p>
+    </footer>
+    <script>
+        function changeContent(section) {
+            var content = '';
+            switch(section) {
+                case 'education':
+                    content = `
+                    <img src="./assets/education.jpg"></img>
+                    <h2>Education</h2>
+                    <ul>
+                        <li>Bachelor's in Computer Science from SOA University</li>
+                        <li>Certifications in Front end from Coding Ninjas</li>
+                    </ul>
+                        `;
+                    break;
+                case 'skills':
+                    content = `
+                    <img src="./assets/skils.jpg"></img>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Java , C#, JS, MYSQL, Spring Boot, React </li>
+                    </ul>
+                        `;
+                    break;
+                case 'hobbies':
+                    content = `
+                    <img src="./assets/art.jpg"></img>
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Painting & Designing</li>
+                        <li>Programming</li>
+                        <li>Shopping</li>
+                    </ul>
+                        `;
+                    break;
+            }
+            document.getElementById('main-content').innerHTML = content;
+        }
+    </script>
+</body>
+</html>

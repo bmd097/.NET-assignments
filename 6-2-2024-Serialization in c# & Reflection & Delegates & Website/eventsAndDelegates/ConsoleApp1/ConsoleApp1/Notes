@@ -1,0 +1,58 @@
+Anonymous Methods:
+Anonymous methods are methods without a name that can be defined inline. They are often used 
+as event handlers or as parameters for delegates. Anonymous methods provide a way to write 
+concise and self-contained code.
+Action<string> printMessage = delegate (string message) { // It looks like a method
+    Console.WriteLine(message);
+};
+Lambda Expressions:
+Lambda expressions are a shorthand syntax for defining anonymous methods. They provide a more 
+concise and readable way to write code. Lambda expressions are commonly used with delegates and 
+LINQ queries.
+Action<string> printMessage = (message) => { // It looks like an arrow function
+    Console.WriteLine(message);
+};
+
+Types of delegates ->
+
+    Action Delegates:
+    The Action delegate is a predefined delegate type in C# that represents a method with no return 
+    value. It can take up to 16 input parameters of any type. Action delegates are commonly used when 
+    you need to pass a method as a parameter without a return value.
+    Action<int, int> add = (a, b) => { // no return value
+        Console.WriteLine(a + b);
+    };
+    add(5, 3); // Output: 8
+
+    Func Delegates:
+    The Func delegate is another predefined delegate type in C# that represents a method with a 
+    return value. It can take up to 16 input parameters of any type and has a generic type parameter 
+    that represents the return type. Func delegates are commonly used when you need to pass a method 
+    as a parameter with a return value.
+    Func<int, int, int> add = (a, b) => { // return value
+        return a + b;
+    };
+
+    Predicate Delegates:
+    The Predicate delegate is a specialized version of the Func delegate that represents a method 
+    that takes a single input parameter and returns a Boolean value. It is commonly used for 
+    filtering or testing conditions.
+    Predicate<int> isEven = (number) => { // special func delgate takes only 1 input but returns a bool value
+        return number % 2 == 0;
+    };
+
+
+Event accessors are used to add or remove event handlers to an event. They are used to control 
+the subscription and unsubscription of event handlers to an event.
+There are two types of event accessors in C#:
+Add Accessor: This accessor is used to add an event handler to the event. It is executed when a 
+new event handler is subscribed to the event. It is defined using the add keyword.
+Remove Accessor: This accessor is used to remove an event handler from the event. It is executed 
+when an event handler is unsubscribed from the event. It is defined using the remove keyword.
+Let's understand this...
+A C# event is simply an add and a remove method (similar to a property's get and set methods).
+The compiler provides a default implementation for these methods, but if you have custom 
+behavior you want to implement yourself, you can write the methods yourself. In your 
+example, which is not thread-safe by the way, the custom accessors are apparently there 
+so that a newly subscribed delegate is invoked as soon as it's added.
+

@@ -1,0 +1,62 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+
+[DataContract]
+public class Person
+{
+    [DataMember]
+    public string Name { get; set; }
+    [DataMember]
+    public int Age { get; set; }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        // Serialization
+        Person person = new Person { Name = "John Doe", Age = 30 };
+        DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Person));
+        using (MemoryStream stream = new MemoryStream())
+        {
+            serializer.WriteObject(stream, person);
+            stream.Position = 0;
+            StreamReader reader = new StreamReader(stream);
+            Console.WriteLine(reader.ReadToEnd());
+        }
+
+        // Deserialization
+        using (MemoryStream stream = new MemoryStream())
+        {
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write("{\"Name\":\"Jane Smith\",\"Age\":25}");
+            writer.Flush();
+            stream.Position = 0;
+            Person deserializedPerson = (Person)serializer.ReadObject(stream);
+            Console.WriteLine($"Name: {deserializedPerson.Name}, Age: {deserializedPerson.Age}");
+        }
+    }
+}
+
+DataContractSerializer and DataContractJsonSerializer are both classes provided by the 
+.NET framework for serializing and deserializing objects. However, they have some differences 
+in terms of the format they use and the scenarios they are commonly used in.
+
+DataContractSerializer:
+The DataContractSerializer is a general-purpose serializer that can be used to serialize and 
+deserialize objects to and from various formats, including XML, JSON, and binary.
+It is primarily used for XML serialization, although it can also handle JSON serialization.
+It uses the DataContract and DataMember attributes to control the serialization process.
+It is part of the System.Runtime.Serialization namespace.
+
+DataContractJsonSerializer:
+The DataContractJsonSerializer is specifically designed for JSON serialization and deserialization.
+It is optimized for working with JSON data and provides better performance compared to the 
+DataContractSerializer for JSON scenarios.
+It also uses the DataContract and DataMember attributes to control the serialization process.
+It is part of the System.Runtime.Serialization.Json namespace.
+In summary, if you need to serialize and deserialize objects to XML, you can use the 
+DataContractSerializer. If you specifically need to work with JSON data, it is recommended 
+to use the DataContractJsonSerializer for better performance and compatibility with JSON format.

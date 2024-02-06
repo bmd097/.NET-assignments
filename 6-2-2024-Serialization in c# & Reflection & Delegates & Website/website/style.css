@@ -1,0 +1,248 @@
+@font-face {
+    font-family: sans;
+    src: url(./fonts/sans.woff2);
+  }
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    scroll-behavior: smooth;
+    font-family: sans , sans-serif;
+
+
+}
+
+body{
+    background: url(./assets/bg.jpg) center fixed;
+    background-size: cover;
+}
+
+nav{
+    background: rgba(0, 0, 0, 0.79);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    left: 0;
+    height: 70px;
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+nav ul a{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header div h2{
+    font-size: 5rem;
+}
+header div h3{
+    font-size: 2rem;
+    letter-spacing: unset;
+    color: rgb(108, 108, 108);
+}
+header div h4{
+    margin-top: 10px;
+    font-size: 2rem;
+    width: fit-content;
+    letter-spacing: unset;
+    background: black;
+    padding: 10px;
+    transform: skewX(-2deg);
+    color: white;
+}
+
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact h2{
+    width: 70%;
+    text-align: right;
+    font-size: 3rem;
+    margin-top: 100px;
+    color: rgb(61, 61, 61);
+    font-weight: bolder;
+
+}
+
+form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-box{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    gap: 35px;
+
+    
+}
+
+label{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.714);
+    color: white;
+    border: none;
+    outline: none;
+    transform: skewX(-2deg);
+    font-size: 1.5rem;
+    padding: 25px 35px;
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+button{
+    border: none;
+    outline: none;
+    transition: all cubic-bezier(.11,.39,.59,1.31) 0.2s;
+    color: white;
+    transform: skewX(-2deg);
+    padding: 20px 40px ;
+    padding-right: 60px;
+    background: rgb(44, 42, 42);
+    border-radius: 8px;
+
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.833);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+
+    
+
+}
+
+footer p{
+    color: white;
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.916);
+    display: flex;
+    gap: 100px;
+    padding: 10px;
+    padding-top: 50px;
+}
+
+.about aside{
+    padding-top: 50px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    height: 100%; 
+}
+
+.about aside div{
+    padding: 15px 20px;
+    transition: all cubic-bezier(.11,.39,.59,1.31) 0.2s;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: skewX(-2deg);
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.788);
+    color: black;
+}
+.about aside div:active{
+    transform:skewX(-2deg)  scale(0.9);
+}
+
+#main-content{
+    padding-top: 100px;
+    padding-right: 100px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content h2 {
+    color: #9dc8ee;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#main-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+#main-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: white;
+    font-size: 2rem;
+}
+
+#main-content img{
+    width: 100%;
+    margin-bottom: 30px;
+    transform: skewX(-2deg);
+    object-fit: cover;
+    height: 250px;
+    border-radius: 30px;
+
+}
