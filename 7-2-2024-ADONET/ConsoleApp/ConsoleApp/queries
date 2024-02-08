@@ -1,0 +1,57 @@
+CREATE TABLE [User] (
+	UserId int identity(1,1) primary key,
+	Username nvarchar(100),
+	Email nvarchar(100),
+	PasswordHash nvarchar(100),
+	RegistrationDate datetime
+);
+
+CREATE TABLE Category (
+	CategoryId int identity(1,1) primary key,
+	Name nvarchar(100),
+	Description text
+);
+
+CREATE TABLE Tag (
+	TagId int identity(1,1) primary key,
+	Name nvarchar(100)
+);
+
+CREATE TABLE Article (
+	ArticleId int identity(1,1) primary key,
+	Title nvarchar(100),
+	Content text,
+	PublishedDate datetime,
+	LastModifiedDate datetime,
+	AuthorId int,
+	CategoryId int,
+	Foreign key (AuthorId) references [User](UserId),
+	Foreign key (CategoryId) references Category(CategoryId)
+);
+
+CREATE TABLE Comment (
+	CommentId int identity(1,1) primary key,
+	ArticleId int,
+	UserId int,
+	Content text,
+	CommentDate datetime,
+	Foreign key(ArticleId) references Article(ArticleId),
+	Foreign key(UserId) references [User](UserId)
+);
+
+CREATE TABLE ArticleTag (
+	ArticleId int,
+	TagId int,
+	Foreign key(ArticleId) references Article(ArticleId),
+	Foreign key(TagId) references Tag(TagId)
+);
+
+CREATE TABLE Attachment (
+	AttachmentId int identity(1,1) primary key,
+	ArticleId int,
+	FileName nvarchar(100),
+	FileType nvarchar(100),
+	FilePath nvarchar(100),
+	UploadDate datetime,
+	Foreign key(ArticleId) references Article(ArticleId)
+);
