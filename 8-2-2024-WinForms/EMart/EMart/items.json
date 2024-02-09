@@ -1,0 +1,107 @@
+﻿[
+    {
+        "id": 1,
+        "name": "Apple iPhone 13",
+        "description": "Apple iPhone 13 with 128GB storage, Midnight color",
+        "qty": 3,
+        "price": 699
+    },
+    {
+        "id": 2,
+        "name": "Samsung Galaxy S21",
+        "description": "Samsung Galaxy S21 with 128GB storage, Phantom Gray color",
+        "qty": 2,
+        "price": 799
+    },
+    {
+        "id": 3,
+        "name": "Sony WH-1000XM4",
+        "description": "Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones",
+        "qty": 4,
+        "price": 348
+    },
+    {
+        "id": 4,
+        "name": "Apple AirPods Pro",
+        "description": "Apple AirPods Pro with Wireless Charging Case",
+        "qty": 2,
+        "price": 197
+    },
+    {
+        "id": 5,
+        "name": "Nintendo Switch",
+        "description": "Nintendo Switch with Neon Blue and Neon Red Joy‑Con",
+        "qty": 7,
+        "price": 299
+    },
+    {
+        "id": 6,
+        "name": "PlayStation 5",
+        "description": "PlayStation 5 Console",
+        "qty": 5,
+        "price": 499
+    },
+    {
+        "id": 7,
+        "name": "Xbox Series X",
+        "description": "Xbox Series X Console",
+        "qty": 6,
+        "price": 499
+    },
+    {
+        "id": 8,
+        "name": "Apple MacBook Pro",
+        "description": "Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7)",
+        "qty": 2,
+        "price": 2399
+    },
+    {
+        "id": 9,
+        "name": "Dell XPS 13",
+        "description": "Dell XPS 13 (13.4-inch, 16GB RAM, 512GB SSD, 11th Gen Intel Core i7)",
+        "qty": 4,
+        "price": 1549
+    },
+    {
+        "id": 10,
+        "name": "Apple iPad Pro",
+        "description": "Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (5th Generation)",
+        "qty": 3,
+        "price": 1099
+    },
+    {
+        "id": 11,
+        "name": "Samsung Galaxy Tab S7",
+        "description": "Samsung Galaxy Tab S7 Wi-Fi, Mystic Black - 128 GB",
+        "qty": 3,
+        "price": 649
+    },
+    {
+        "id": 12,
+        "name": "Apple Watch Series 7",
+        "description": "Apple Watch Series 7 (GPS, 41mm) - Starlight Aluminum Case with Starlight Sport Band",
+        "qty": 5,
+        "price": 399
+    },
+    {
+        "id": 13,
+        "name": "Samsung Galaxy Watch 4",
+        "description": "Samsung Galaxy Watch 4 (44mm, GPS, Bluetooth) Smart Watch with Advanced Health Monitoring, Fitness Tracking, and Long Lasting Battery",
+        "qty": 3,
+        "price": 279
+    },
+    {
+        "id": 14,
+        "name": "Bose QuietComfort 35 II",
+        "description": "Bose QuietComfort 35 II Wireless Bluetooth Headphones, Noise-Cancelling, with Alexa Voice Control",
+        "qty": 5,
+        "price": 299
+    },
+    {
+        "id": 15,
+        "name": "JBL Flip 5",
+        "description": "JBL Flip 5 Waterproof Portable Wireless Bluetooth Speaker Bundle with divvi! Protective Hardshell Case",
+        "qty": 3,
+        "price": 119
+    }
+]
