@@ -1,0 +1,90 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.Page {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.Page .flex {
+    display: flex;
+    gap: 15px;
+}
+
+    .Page .control {
+        background: #ecebeb;
+        padding:10px 15px;
+        border-radius:6px;
+    }
+
+        .Page .control h3 {
+            margin-bottom:unset;
+            font-family: "Poppins", sans-serif;
+            flex: 1;
+        }
+
+
+.headlines{
+    width:100%;
+    flex:1;
+    overflow:auto;
+    flex-wrap:wrap;
+    display:flex;
+    gap:10px;
+}
+
+    .headlines .headline {
+        background: #212529; 
+        border-radius:8px;
+        padding:15px;
+        height:300px;
+        width:32%;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .headlines .headline h2 {
+        color: white;
+        width: 100%;
+        margin-bottom:unset;
+        font-size: 23px;
+    }
+
+        .headlines .headline p {
+            color: white;
+            margin-bottom: unset;
+            font-size: 16px;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            height: 100px;
+            width: 100%;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            
+        }
+
+    .headlines .headline .tags {
+        display:flex;
+        width:100%;
+        gap:7px;
+        flex-wrap:wrap;
+    }
+
+    .headlines .headline .tags p{
+        color:hotpink;
+        width:fit-content;
+    }
+
+    .headlines .headline button {
+        margin-top :auto;
+    }
+
+    .headlines .headline button a{
+        text-decoration:none;
+        color:white;
+
+    }
