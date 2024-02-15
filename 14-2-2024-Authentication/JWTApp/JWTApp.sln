@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTApp", "JWTApp\JWTApp.csproj", "{3D3FB2DD-9290-43CB-8E48-201EDF4336DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUtils", "MyUtils\MyUtils.csproj", "{B0A04D25-396A-4A82-9D95-C8631D52F963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCBuiltIn", "MVCBuiltIn\MVCBuiltIn.csproj", "{8E51010B-E7AC-4E21-A67A-9FC66C66D99D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D3FB2DD-9290-43CB-8E48-201EDF4336DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3FB2DD-9290-43CB-8E48-201EDF4336DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3FB2DD-9290-43CB-8E48-201EDF4336DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3FB2DD-9290-43CB-8E48-201EDF4336DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A04D25-396A-4A82-9D95-C8631D52F963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A04D25-396A-4A82-9D95-C8631D52F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A04D25-396A-4A82-9D95-C8631D52F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A04D25-396A-4A82-9D95-C8631D52F963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E51010B-E7AC-4E21-A67A-9FC66C66D99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E51010B-E7AC-4E21-A67A-9FC66C66D99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E51010B-E7AC-4E21-A67A-9FC66C66D99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E51010B-E7AC-4E21-A67A-9FC66C66D99D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C73D868-E4FF-47EE-9730-616E22A8D22C}
+	EndGlobalSection
+EndGlobal

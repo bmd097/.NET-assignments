@@ -1,0 +1,21 @@
+﻿.authModal {
+    position: fixed;
+    width: 300px;
+    height: fit-content;
+    padding: 15px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: lightgrey 0px 0px 5px;
+}
+
+.authModal input{
+    width:100%;
+    padding:9px 14px;
+    border: solid lightgrey 1.5px;
+    border-radius:7px;
+}
+
