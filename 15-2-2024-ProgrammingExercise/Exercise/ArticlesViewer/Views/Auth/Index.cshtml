@@ -1,0 +1,24 @@
+﻿
+@Html.Partial("_headerAuth")
+<div class="Auth">
+    <form method="POST" action="/Auth/LogIn">
+        <h2 style="margin:0;text-align:center;font-size:18px;">Auth Tool</h2>
+        <input name="email" placeholder="Email" type="email" required />
+        <input name="password" placeholder="Password" type="password" required />
+        <div class="myrow">
+            <button type="submit">LogIn</button>
+            <button type="submit" name="register" value="true">Register</button>
+        </div>
+        @if (!string.IsNullOrEmpty(ViewBag.Message)) {
+            <div class="log-mess success-message" style="color:green">@ViewBag.Message</div>
+        }
+
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage)) {
+            <div class="log-mess error-message" style="color:red">@ViewBag.ErrorMessage</div>
+        }
+    </form>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/Auth.css" />
+

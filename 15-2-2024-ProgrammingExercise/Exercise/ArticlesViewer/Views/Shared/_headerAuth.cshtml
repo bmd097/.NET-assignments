@@ -1,0 +1,10 @@
+﻿@using ArticlesViewer.HtmlHelpers
+@using System.Web.Mvc
+
+@helper MyCustomText(string text) { <p style="margin:0"> @text </p> }
+
+<header>
+    <h1 style="font-size:18px;text-align:center;display:flex;
+align-items:center;gap:10px;
+justify-content:center">My Website Partial View @MyCustomText("Reusable") @Html.MyCustomButton("Hello")</h1>
+</header>

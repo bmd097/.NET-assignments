@@ -1,0 +1,64 @@
+﻿*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+.Table{
+    width:100%;
+    height:70vh;
+    overflow:auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+ 
+}
+
+
+    .Table .row{
+        width:100%;
+        height:fit-content;
+        display:flex;
+    }
+
+    .Table .head {
+        background:lightblue;
+      
+    }
+
+    .Table .main-content{
+        width:100%;
+        height:100%;
+        overflow:auto;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .Table .row .cell {
+        width: calc(100%/8);
+        display: flex;
+        overflow: auto;
+        border: solid lightgrey 1px;
+        padding: 7px;
+    }
+
+            .Table .row .cell p {
+                width: 100% !important;
+                height:fit-content;
+            }
+
+            button {
+                padding: 10px 15px;
+                border: none;
+                width:fit-content !important;
+                height:fit-content!important;
+                outline: none;
+                color: white;
+                background: black;
+                border-radius: 10px;
+                transition: all ease-in-out 0.2s;
+            }
+
+button:active{
+    transform:scale(0.9);
+}

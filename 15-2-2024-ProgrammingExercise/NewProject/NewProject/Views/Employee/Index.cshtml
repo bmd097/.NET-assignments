@@ -1,0 +1,33 @@
+﻿@model List<NewProject.Models.Employee>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(e => e[0].EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Job)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].DtOfBirth)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@Html.DisplayFor(e=>item.EmployeeId)</td>
+                <td>@Html.DisplayFor(e => item.Name)</td>
+                <td>@Html.DisplayFor(e => item.Job)</td>
+                <td>@Html.DisplayFor(e => item.DtOfBirth)</td>
+            </tr>
+        }
+        
+
+    </tbody>
+    
+</table>
