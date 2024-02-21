@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model WebApplication.Models.ResultModel
+
+@using WebApplication.HtmlHelpers
+
+@*<form class="box" method="POST" action="/Magic/FetchAll">
+
+    <img src="~/Assets/india.jpg" id="pictureId" />
+    <div class="row">
+        <select name="country" onchange="runThis()" id="countryId">
+            @foreach (var country in Model.Countries.GetCounties()) {
+                <option selected="@(country.Code==Model.CountryCodeSelected)" value="@country.Code">@country.Name</option>
+            }
+        </select>
+        <button class="btn btn-primary">Load</button>
+    </div>
+    @if (Model.Cities != null && Model.Cities.Count > 0) {
+        <div class="row">
+            <select name="city">
+                @foreach (var city in Model.Cities) {
+                    <option selected="@(city==Model.CitySelected)" value="@city">@city</option>
+                }
+            </select>
+            <button class="btn btn-success">Load</button>
+        </div>
+    }
+    @if (Model.Districts != null && Model.Districts.Count > 0) {
+        <div class="row">
+            <select name="district">
+                @foreach (var district in Model.Districts) {
+                    <option value="@district">@district</option>
+                }
+            </select>
+            <button class="btn btn-dark" onclick="alert('OK!')"> Request </button>
+        </div>
+    }
+
+</form>*@
+
+@Html.CountryFormHelper(Model,"/Unity/FetchAll")
+
+<link rel="stylesheet" href="~/MagicCss.css" />
+
+<script>
+
+    let selector = document.getElementById("countryId");
+    let pictureId = document.getElementById("pictureId");
+
+    function runThis() {
+        if (selector.value == "in") {
+            pictureId.src = "/Assets/india.jpg";
+        } else if (selector.value == "us") {
+            pictureId.src = "/Assets/america.jpg";
+        } else if (selector.value == "fr") {
+            pictureId.src = "/Assets/france.jpg";
+        } else if (selector.value == "cz") {
+            pictureId.src = "/Assets/czech.jpg";
+        } else {
+            pictureId.src = "/Assets/japan.jpg";
+        }
+    }
+
+    runThis();
+
+</script>

@@ -63,17 +63,8 @@ namespace ArticlesViewer.Controllers
                     articleDb.PublishedDate = article.PublishedDate;
                     articleDb.LastModifiedDate = article.LastModifiedDate;
 
-                    var usersDictionary = new Dictionary<string, string>();
-                    var categoriesDictionary = new Dictionary<string, string>();
-                    foreach (var category in WordVoyagerDb.GetInstance().GetCategories())
-                        categoriesDictionary[category.Name] = category.CategoryId + "";
-                    foreach (var user in WordVoyagerDb.GetInstance().GetUsers())
-                        usersDictionary[user.Username] = user.UserId + "";
-
-                    Console.WriteLine(categoriesDictionary);
-
-                    articleDb.AuthorId = usersDictionary[article.Author];
-                    articleDb.CategoryId = categoriesDictionary[article.Category];
+                    articleDb.AuthorId = article.AuthorId+"";
+                    articleDb.CategoryId = article.CategoryId+"";
 
                     if (articleDb.AuthorId != null && articleDb.CategoryId != null) {
                         if (WordVoyagerDb.GetInstance().AddArticle(articleDb))
@@ -82,9 +73,19 @@ namespace ArticlesViewer.Controllers
 
                     }
                 }
+                
+
             } catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
+            var categoriesDictionary1 = new Dictionary<string, string>();
+            foreach (var category in WordVoyagerDb.GetInstance().GetCategories())
+                categoriesDictionary1[category.Name] = category.CategoryId + "";
+            ViewBag.Categories = categoriesDictionary1;
+            var usersDictionary = new Dictionary<string, string>();
+            foreach (var user in WordVoyagerDb.GetInstance().GetUsers())
+                usersDictionary[user.Username] = user.UserId + "";
+            ViewBag.Users = usersDictionary;
             return View();
         }
 

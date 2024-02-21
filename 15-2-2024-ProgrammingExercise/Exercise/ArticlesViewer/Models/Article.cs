@@ -12,5 +12,7 @@ namespace ArticlesViewer.Models {
         public string LastModifiedDate { get; set; }
         public string Author { get; set; }
         public string Category { get; set; }
+        public int AuthorId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

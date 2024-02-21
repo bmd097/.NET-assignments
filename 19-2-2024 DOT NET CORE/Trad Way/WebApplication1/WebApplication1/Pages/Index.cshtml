@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@inject WebApplication1.Utils.FishCatcherUtil fishCatchers;
+
+@IndexModel.persons.ToString()
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="card-columns">
+    @foreach (var fishCathe in fishCatchers.GetFishPersons()) {
+        <div class="card" style="padding:16px">
+            <h2 class="card-title">@fishCathe.Name</h2>
+            <h2 class="card-text">@fishCathe.Age</h2>
+            <button class="btn btn-primary" onclick="alert('@fishCathe.Name')">View</button>
+        </div>
+    }
+</div>

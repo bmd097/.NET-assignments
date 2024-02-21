@@ -12,19 +12,19 @@
         <div class="mycol" style="width:40px;min-width:40px">
             <input type="checkbox" />
         </div>
-        <div class="mycol">
+        <div class="mycol" onclick="sort('title')" style="cursor:pointer">
             <p>Title</p>
         </div>
-        <div class="mycol">
+        <div class="mycol" >
             <p>Content</p>
         </div>
-        <div class="mycol">
+        <div class="mycol"  onclick="sort('published')" style="cursor:pointer">
             <p>Published</p>
         </div>
-        <div class="mycol">
+        <div class="mycol"  onclick="sort('modified')" style="cursor:pointer">
             <p>Modified</p>
         </div>
-        <div class="mycol">
+        <div class="mycol" >
             <p>Author</p>
         </div>
         <div class="mycol">
@@ -34,7 +34,7 @@
             <p>Actions</p>
         </div>
     </div>
-    <div class="content">
+    <div class="content" id="contentRowsHolder">
         @foreach (var article in Model) {
             <div class="myrow">
                 <div class="mycol" style="width:40px;min-width:40px">
@@ -104,5 +104,33 @@
 
         let url = '/WordVoyager/Index?page=' + page + '&limit=' + limit;
         location.href = url;
+    }
+
+    let contentRowsHolder = document.getElementById("contentRowsHolder");
+
+    function sort(type) {
+        let nodes = Array.from(contentRowsHolder.children);
+
+        if (type == 'title') {
+            nodes.sort((a, b) => {
+                let titleA = a.querySelector('.mycol:nth-child(2) p').textContent.toLowerCase();
+                let titleB = b.querySelector('.mycol:nth-child(2) p').textContent.toLowerCase();
+                return titleA.localeCompare(titleB);
+            });
+        } else if (type == 'published') {
+            nodes.sort((a, b) => {
+                let dateA = new Date(a.querySelector('.mycol:nth-child(4) p').textContent);
+                let dateB = new Date(b.querySelector('.mycol:nth-child(4) p').textContent);
+                return dateA - dateB;
+            });
+        } else if (type == 'modified') {
+            nodes.sort((a, b) => {
+                let dateA = new Date(a.querySelector('.mycol:nth-child(5) p').textContent);
+                let dateB = new Date(b.querySelector('.mycol:nth-child(5) p').textContent);
+                return dateA - dateB;
+            });
+        }
+
+        nodes.forEach(node => contentRowsHolder.appendChild(node));
     }
 </script>

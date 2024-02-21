@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{AA21D652-22DC-4A8A-A17F-C75B5CB2F6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialUtils", "EssentialUtils\EssentialUtils.csproj", "{0D996F72-92E1-46C1-8F3E-115AE676326E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA21D652-22DC-4A8A-A17F-C75B5CB2F6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA21D652-22DC-4A8A-A17F-C75B5CB2F6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA21D652-22DC-4A8A-A17F-C75B5CB2F6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA21D652-22DC-4A8A-A17F-C75B5CB2F6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D996F72-92E1-46C1-8F3E-115AE676326E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D996F72-92E1-46C1-8F3E-115AE676326E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D996F72-92E1-46C1-8F3E-115AE676326E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D996F72-92E1-46C1-8F3E-115AE676326E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F678F558-0965-458E-9528-26709D3F66A5}
+	EndGlobalSection
+EndGlobal
